@@ -1,0 +1,39 @@
+.account-new-post__ava {
+    float: left;
+    margin-top: -5px;
+  }
+  
+  .account-new-post__ava-pic {
+    width: 28px;  
+    border-radius: 50%;
+  }
+  
+  .account-new-post__text {
+    margin-top: 2px;
+    margin-left: 10px;
+    border: none;
+  }
+  
+  .account-new-post__text:focus-visible {
+    border: none;
+  }
+  
+  .account-new-post__options {
+    float: right;
+  }
+  
+  .account-new-post__option {
+    display: inline;
+    padding-left: 10px;
+  }
+  
+  .account-new-post__option-link {
+    color:#a5acb6;
+  }
+  
+  .account-new-post__divider {
+    display: inline-block;
+    height: 20px;
+    margin-left: 10px;
+    border-right: 1px solid #a5acb6;
+  }

@@ -1,0 +1,173 @@
+.post__ava {
+    float: left;
+    margin-top: -5px;
+    margin-right: 15px;
+}
+
+.post__ava-pic {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post__header {
+    margin-bottom: 24px;
+}
+
+.post__content-repost {
+    padding-left: 10px;
+    border-left: 2px solid #0014331f;
+}
+
+.post__time-link {
+    color:#818c99;
+}
+
+.post__content-repost .post__ava-pic {
+    width: 40px;
+}
+
+.post__content-repost .post__header {
+    margin-bottom: 14px;
+}
+
+.post__text {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.post__text-link {
+    color: #000;
+}
+
+.post__media-pics {
+    margin-bottom: 15px;
+}
+
+.post__media-pic {
+    width: 100%;
+}
+
+.post__media-audio {
+    border: 1px solid #0000001f;
+    margin-bottom: 15px;
+}
+
+.post__media-audio-cover {
+    width: 64px;
+    height: 64px;
+    background: url('/public/img/post1-audio-cover.jpg') no-repeat center center;
+    background-size: cover;
+    float: left;
+    margin-right: 10px;
+}
+
+.post__media-audio-controls {
+    float: right;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+
+.post__media-audio-control {
+    display: inline;
+    padding-left: 10px;
+}
+
+.post__media-audio-control-link {
+    color:#a5acb6;
+}
+
+.post__media-audio-header {
+    height: 64px;
+    border-bottom: 1px solid #0000001f;
+}
+
+.post__media-audio-meta {
+    float: left;
+}
+
+.post__media-audio-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000;
+    line-height: 2;
+}
+
+.post__media-audio-list {
+    padding: 15px;
+}
+
+.post__media-audio-track {
+    display: block;
+    padding: 10px;
+
+    border-radius: 4px;
+
+}
+
+.post__media-audio-track:hover {
+    background-color: #f5f6f8;
+
+}
+
+.post__media-audio-track-counter {
+    float:left;
+    padding-right: 10px;
+}
+
+
+
+.post__media-audio-track-time {
+    float:right;
+    padding-right: 10px;
+}
+
+.post__media-reachlink {
+    border: 1px solid #0000001f;
+    height: 64px;
+    margin-bottom: 15px;
+}
+
+.post__media-reachlink-cover {
+    width: 150px;
+    height: 62px;
+    background: url('/public/img/post1-audio-cover.jpg') no-repeat center center;
+    background-size: cover;
+    float: left;
+    margin-right: 10px;
+}
+
+.post__media-reachlink-title {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 2;
+
+}
+
+.post__media-reachlink-meta {
+    margin-left: 165px;
+    margin-top: 10px;
+}
+
+.post__footer-action {
+    display: inline-block;
+    padding: 4px 15px 2px;
+    border-radius: 16px;
+    color: #99a2ad;
+    background-color: #f0f2f5;
+}
+
+.post__footer-views {
+    display: flex;
+    flex-wrap: nowrap;
+    float: right;
+    color: #99a2ad;
+    padding-top: 8px;
+}
+
+.post__footer-views-icon {
+    padding-right: 5px;
+}
+
+.post__media-video {
+    margin-bottom: 15px;
+}

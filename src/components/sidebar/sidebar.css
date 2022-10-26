@@ -1,0 +1,45 @@
+.sidebar {
+    width: 165px;
+}
+
+.main-nav {
+    margin-bottom: 20px;
+}
+
+.main-nav__item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 6px;
+    height: 30px;
+    color: #000;
+    border-radius: 4px;
+}
+
+.main-nav__item:hover {
+    background-color: #aeb7c21f;
+}
+
+.main-nav__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: #5181b8;
+}
+
+.main-nav__divider {
+    margin: 8px 0 8px 30px;
+    border-top: 1px solid #dce1e6;
+}
+
+.main-nav__other {
+    font-size: 0.7rem;
+    padding: 0 6px;
+}
+
+.main-nav__other-item {
+    margin-right: 10px;
+    line-height: 1.5;
+    color: #00000080;
+}

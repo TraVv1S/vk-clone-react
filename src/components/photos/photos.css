@@ -1,0 +1,21 @@
+.account-photos__photos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-photos__photo {
+    display: inline-block;
+    width: 123px;
+    height: 123px;
+    margin-left: 5px;
+}
+
+.account-photos__photo:first-child {
+    margin-left: 0;
+}
+
+.account-photos__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
