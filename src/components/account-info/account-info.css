@@ -1,0 +1,78 @@
+.account-info__divider {
+    margin: 15px 0;
+    border-top: 1px solid #dce1e6;
+  }
+  
+  .account-info__row {
+    padding-top: 9px;
+  }
+  
+  .account-info__title {
+    width: 165px;
+  }
+  
+  .account-info__title {
+    float: left;
+  }
+  
+  .account-info__more-link {
+    display: block;
+    width: 100%;
+    height: 30px;
+    
+    /* padding-left: 165px; */
+    padding-top: 10px;
+    padding-bottom: 25px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .account-info__more-link:hover {
+    background-color: #f4f6f8;
+  }
+  
+  .account-info__divider-full {
+    margin: 0 -15px 15px;
+    border-top: 1px solid #dce1e6;
+  }
+  
+  .account-info__more-header {
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .account-info__more-category-edit {
+    float: right;
+  }
+  
+  .account-info__more-category {
+    padding-bottom: 20px;
+  }
+  
+  .account-info__counts {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .account-info__counter {
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+  }
+  
+  .account-info__count {
+    font-size: 1.5em;
+  }
+  
+  .account-info__count-title {
+    color: #626d7a;
+  }
+  
+  .account-info__counter {
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+  }

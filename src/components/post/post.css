@@ -158,6 +158,8 @@
     font-weight: 500;
     color: #99a2ad;
     background-color: #f0f2f5;
+    cursor: pointer;
+    
 }
 
 .post__footer-views {
