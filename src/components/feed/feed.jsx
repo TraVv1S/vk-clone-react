@@ -23,11 +23,11 @@ const Feed = () => {
                         <a href="/" className="island__tab-link">Архив записей</a>
                     </li>
                 </ul>
-                
+
                 {/* <div className="account-info__divider-full"></div> */}
             </div>
         
-            {user.posts.map((p,i) => <Post postNum={i}/>)}
+            {user.posts.filter(p => p.archived == false).map((p,i) => <Post postNum={i}/>)}
             
         </div>
     )

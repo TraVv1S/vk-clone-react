@@ -13,9 +13,9 @@ const Photos = () => {
                 <span className="island__label-count">{count}</span>
             </a>
             <div className="account-photos__photos">
-                {urls.map((url) => {
+                {urls.map((url, i) => {
                     return (
-                        <a href="/" className="account-photos__photo">
+                        <a href="/" key={i} className="account-photos__photo">
                             <img className="account-photos__img" src={url} />
                         </a>
                     )

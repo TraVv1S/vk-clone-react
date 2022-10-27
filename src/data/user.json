@@ -43,7 +43,7 @@
                 "/img/photo-3.jpg",
                 "/img/photo-4.jpg"]
     },
-    "friends": {
+    "friendscount": {
         "count": 289,
         "ids": []
     },
@@ -88,7 +88,7 @@
                 "",
                 "Всем хой!"],
             "media": {
-                "audio": "https://www.youtube.com/embed/Azi8ug35L4o?controls=0",
+                "audio": "#",
                 "photo": "/img/post1-pic1.jpg",
                 "link": "#"
             },
@@ -97,7 +97,70 @@
             "reposts": 1,
             "views": 666,
             "archived": false
+        },
+        {
+            "id": 33,
+            "repost_id": null,
+            "time": "7 фев в 17:09",
+            "text": ["Вышел!🥳🥳🥳🥳",
+                "Этим хитом мы проводим черту между смутным прошлым и светлым будущим. Делитесь треком со всеми, комментируйте и наслаждайтесь сами.",
+                "https://band.link/fz97p (по мере появления на площадках будет редактироваться)",
+                "repost",
+                "Всем хой!"],
+            "media": {
+                "audio": "#",
+                "photo": "/img/post1-pic1.jpg",
+                "link": "#"
+            },
+            "likes": 103,
+            "comments": 22,
+            "reposts": 13,
+            "views": 123,
+            "archived": true
         }
+    ],
+    "friends": [{
+                    "id": 1,
+                    "ava": "/img/friend-ava.jpg",
+                    "name": "Валентин",
+                    "online": true
+                },
+                {
+                    "id": 2,
+                    "ava": "/img/friend-ava2.jpg",
+                    "name": "Руслан",
+                    "online": false
+                },
+                {
+                    "id": 3,
+                    "ava": "/img/friend-ava3.jpg",
+                    "name": "Сергей",
+                    "online": true
+                },
+                {
+                    "id": 4,
+                    "ava": "/img/friend-ava4.jpg",
+                    "name": "Анастасия",
+                    "online": true
+                },
+                {
+                    "id": 5,
+                    "ava": "/img/friend-ava5.jpg",
+                    "name": "Сергей",
+                    "online": true
+                },
+                {
+                    "id": 6,
+                    "ava": "/img/friend-ava6.jpg",
+                    "name": "Александр",
+                    "online": true
+                },
+                {
+                    "id": 7,
+                    "ava": "/img/friend-ava7.jpg",
+                    "name": "Иван",
+                    "online": true
+                }
     ]
 
 }

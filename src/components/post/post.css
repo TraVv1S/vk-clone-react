@@ -149,9 +149,13 @@
 }
 
 .post__footer-action {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     padding: 4px 15px 2px;
+    margin-right: 5px;
     border-radius: 16px;
+    font-weight: 500;
     color: #99a2ad;
     background-color: #f0f2f5;
 }

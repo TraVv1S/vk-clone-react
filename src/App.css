@@ -101,6 +101,11 @@ button {
   background-color: #edeef0;
 }
 
+.column-s {
+  width: 232px;
+  height: 1000px;
+  
+}
 
 .column-m {
   width: 550px;
@@ -118,9 +123,7 @@ button {
   margin-bottom: 15px;
 }
 
-.avatar__pic-edit {
-  margin-bottom: 10px;
-}
+
 
 .button-blue {
   width: 100%;
@@ -138,47 +141,7 @@ button {
   background-color: #dae2ea;
 }
 
-.avatar__nav {
-  margin-left: -15px;
-  margin-right: -15px;
-}
 
-.avatar__item {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  padding: 0 16px;
-  height: 36px;
-  color: #818c99;
-  border-radius: 4px;
-}
-
-.avatar__item:hover {
-  background-color: #aeb7c21f;
-}
-
-.avatar__item-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.profile-link__link {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  padding: 0 6px;
-  height: 30px;
-  color: #5181b8;
-  border-radius: 4px;
-  margin-top: -6px;
-  margin-bottom: -6px;
-}
-
-.profile-link__item-icon {
-  width: 30px;
-}
 
 .account-gifts__gift {
   width: 64px;
