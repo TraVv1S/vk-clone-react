@@ -1,11 +1,11 @@
 import user from '../../data/user.json'
 
-import './friends.css'
+import classes from './friends.module.scss'
 
 const Friends = () =>{
 
     return (
-        <div className="account-friends island">
+        <div className={classes.accountfriends}>
             <a href="/" className="island__right-link">обновления</a>
             <a href="/" className="island__label">
                 <span className="island__label-title">Друзья</span>

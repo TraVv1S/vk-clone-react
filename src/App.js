@@ -7,7 +7,7 @@ import Messenger from "./pages/messenger"
 import News from "./pages/news"
 
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

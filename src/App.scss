@@ -91,22 +91,22 @@ button {
   border: none;
   color: #2a5885;
   background-color: #fff;
-}
 
-.button-blue {
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e5ebf1;
-  margin: auto;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
+  &-blue {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5ebf1;
+    margin: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
 
-.button-blue:hover {
-  background-color: #dae2ea;
+    &:hover {
+      background-color: #dae2ea;
+    }
+  }
 }
 
 .content {
@@ -127,7 +127,7 @@ button {
   height: 1000px;
 }
 
-.island {
+%island {
   width: 100%;
   background-color: #fff;
   padding: 15px;
@@ -136,38 +136,42 @@ button {
   margin-bottom: 15px;
 }
 
-.island__label {
-  display: block;
-  margin-bottom: 15px;
-}
+.island {
+  @extend %island;
 
-.island__label-title {
-  color: #000;
-}
+  &__label {
+    display: block;
+    margin-bottom: 15px;
 
-.island__right-link {
-  float: right;
-  color: #818c99;
-}
+    &-title {
+      color: #000;
+    }
 
-.island__label-count {
-  color: #818c99;
-  padding: 0 6px;
-}
+    &-count {
+      color: #818c99;
+      padding: 0 6px;
+    }
+  }
 
-.island__tab {
-  display: inline-block;
-}
+  &__right-link {
+    float: right;
+    color: #818c99;
+  }
 
-.island__tab-link {
-  display: block;
-  padding: 0 8px 14px;
-  color: #626d7a;
-}
+  &__tab {
+    display: inline-block;
 
-.island__tab-link.active {
-  border-bottom: 2px solid #5181b8;
-  color: #000;
+    &-link {
+      display: block;
+      padding: 0 8px 14px;
+      color: #626d7a;
+
+      &.active {
+        border-bottom: 2px solid #5181b8;
+        color: #000;
+      }
+    }
+  }
 }
 
 /* messenger */
@@ -175,44 +179,42 @@ button {
   padding: 0;
   display: flex;
   flex-direction: column;
-}
 
-.dialogues__dialogue {
-  padding: 10px;
-  border: #edeef0 solid 1px;
-  margin-top: -1px;
-}
+  &__dialogue {
+    padding: 10px;
+    border: #edeef0 solid 1px;
+    margin-top: -1px;
 
-.dialogues__dialogue-pic {
-  float:left;
-  border-radius: 50%;
-  width: 40px;
-}
+    &-pic {
+      float:left;
+      border-radius: 50%;
+      width: 40px;
+    }
 
-.dialogues__dialogue-meta {
-  padding-left: 50px;
-  line-height: 1.3;
-  padding-top: 4px;
-}
+    &-meta {
+      padding-left: 50px;
+      line-height: 1.3;
+      padding-top: 4px;
+    }
 
-.dialogues__dialogue-name {
-  font-size: 12.5px;
-}
+    &-name {
+      font-size: 12.5px;
+    }
 
-.dialogues__dialogue-status {
-  font-size: 12px;
-  color: #626d7a;
+    &-status {
+      font-size: 12px;
+      color: #626d7a;
+    }
+  }
 }
-
 
 /* trash */
 .filter {
   padding: 10px;
   
-}
-
-.filter.active {
-  background-color: #f0f2f5;
-  font-weight: 700;
-  border-left: 3px solid #6285af;
+  &.active {
+    background-color: #f0f2f5;
+    font-weight: 700;
+    border-left: 3px solid #6285af;
+  }
 }
