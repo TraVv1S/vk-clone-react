@@ -1,18 +1,16 @@
-import './gifts.css'
+import classes from './gifts.module.scss'
+import Island from '../../uikit/island/island';
+import Widget from '../../uikit/island/widget';
 
 const Gifts = () => {
     return (
-        <div className="account-gifts island">
-            <a href="/" className="island__label">
-                <span className="island__label-title">Подарки</span>
-                <span className="island__label-count">37</span>
-            </a>
-            <div className="account-gifts__gifts island__content">
-                <img src="/img/gift.png" alt="" className="account-gifts__gift" />
-                <img src="/img/gift.png" alt="" className="account-gifts__gift" />
-                <img src="/img/gift.png" alt="" className="account-gifts__gift" />
-            </div>
-        </div>
+        <Island>
+            <Widget title="Gifts" count="37">
+                <img src="/img/gift.png" alt="" className={classes.gift} />
+                <img src="/img/gift.png" alt="" className={classes.gift} />
+                <img src="/img/gift.png" alt="" className={classes.gift} />
+            </Widget>
+        </Island>
     )
 }
 

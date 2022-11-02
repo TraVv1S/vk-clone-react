@@ -127,52 +127,6 @@ button {
   height: 1000px;
 }
 
-%island {
-  width: 100%;
-  background-color: #fff;
-  padding: 15px;
-  border: 1px solid #e7e8ec;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
-.island {
-  @extend %island;
-
-  &__label {
-    display: block;
-    margin-bottom: 15px;
-
-    &-title {
-      color: #000;
-    }
-
-    &-count {
-      color: #818c99;
-      padding: 0 6px;
-    }
-  }
-
-  &__right-link {
-    float: right;
-    color: #818c99;
-  }
-
-  &__tab {
-    display: inline-block;
-
-    &-link {
-      display: block;
-      padding: 0 8px 14px;
-      color: #626d7a;
-
-      &.active {
-        border-bottom: 2px solid #5181b8;
-        color: #000;
-      }
-    }
-  }
-}
 
 /* messenger */
 .dialogues {

@@ -1,6 +1,4 @@
-
-import './sidebar.css'
-
+import classes from './sidebar.module.scss'
 
 const Sidebar = () => {
     const menuItems = [{
@@ -88,42 +86,42 @@ const Sidebar = () => {
                             link: "",
                             icon: (<object data="img/icons/pill.svg" width="20" height="20"> </object>),
                         }
-                        ]
+                        ];
     
-        return (
-            <aside className="sidebar">
-                <ul className="main-nav">
-                    {menuItems.map(e => <li>
-                                            <a href={e.link} className="main-nav__item">
-                                                <div className="main-nav__item-icon">
-                                                    {e.icon}
-                                                </div>
-                                                <span className="main-nav__item-title">
-                                                    {e.text}
-                                                </span>
-                                            </a>
-                                        </li>)}
-                    
-                    
-                </ul>
+    return (
+        <aside className={classes.sidebar}>
+            <ul className={classes.mainnav}>
+                {menuItems.map(e => <li>
+                                        <a href={e.link} className={classes.item}>
+                                            <div className={classes.icon}>
+                                                {e.icon}
+                                            </div>
+                                            <span className={classes.title}>
+                                                {e.text}
+                                            </span>
+                                        </a>
+                                    </li>)}
+                
+                
+            </ul>
 
-                <div className="main-nav__other">
-                    <a href="/" className="main-nav__other-item">
-                        Блог
-                    </a>
-                    <a href="/" className="main-nav__other-item">
-                        Разработчикам
-                    </a>
-                    <a href="/" className="main-nav__other-item">
-                        Для бизнеса
-                    </a>
-                    <a href="/" className="main-nav__other-item">
-                        Ещё
-                    </a>
-                </div>
-            </aside>
-        )
+            <div className={classes.other}>
+                <a href="/" className={classes.otheritem}>
+                    Blog
+                </a>
+                <a href="/" className={classes.otheritem}>
+                    For Developers
+                </a>
+                <a href="/" className={classes.otheritem}>
+                    For Business
+                </a>
+                <a href="/" className={classes.otheritem}>
+                    More
+                </a>
+            </div>
+        </aside>
+    )
     
 }
 
-export default Sidebar
+export default Sidebar;

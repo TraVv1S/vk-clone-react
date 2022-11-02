@@ -1,0 +1,123 @@
+.subscription {
+  display: block;
+  min-height: 40px;
+  margin-bottom: 12px;
+
+  &_pic {
+    float:left;
+    border-radius: 50%;
+    width: 40px;
+  }
+
+  &_meta {
+    padding-left: 50px;
+    line-height: 1.3;
+    padding-top: 4px;
+  }
+
+  &_name {
+    font-size: 12.5px;
+  }
+
+  &_status {
+    font-size: 12px;
+    color: #626d7a;
+  }
+}
+  
+.photoalbum {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 130px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 4px;
+
+  &_title {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: #fff;
+    padding: 0 10px;
+  }
+
+  &_count {
+    float:right;
+  }
+
+  &_name {
+    font-weight: 700;
+  }
+
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 112px;
+  background-size: cover;
+  margin-bottom: 15px;
+
+  &_overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #fff;
+    padding: 5px;
+    background-color: #00000066;
+    border-radius: 4px;
+  }
+
+  &_play {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: calc(50% - 25px);
+    color: #fff;
+    padding: 25px;
+    // background: url(/img/icons/video_play.png) no-repeat center;
+    background-color: #00000066;
+    border-radius: 50%;
+  }
+}
+  
+.track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 12.5;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 4px;
+
+  &:hover {
+    background-color: #f5f6f8;
+  }
+
+  &_cover {
+    width:40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+
+  &_name {
+    font-weight: 500;
+  }
+
+  &_author {
+    color:#818c99;
+  }
+}
+
+.divider {
+  margin: 0 -15px 15px;
+  border-top: 1px solid #dce1e6;
+}

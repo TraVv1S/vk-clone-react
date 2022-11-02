@@ -2,11 +2,11 @@
     width: 165px;
 }
 
-.main-nav {
+.mainnav {
     margin-bottom: 20px;
 }
 
-.main-nav__item {
+.item {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -14,13 +14,13 @@
     height: 30px;
     color: #000;
     border-radius: 4px;
+
+    &:hover {
+        background-color: #aeb7c21f;
+    }
 }
 
-.main-nav__item:hover {
-    background-color: #aeb7c21f;
-}
-
-.main-nav__item-icon {
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,18 +28,18 @@
     color: #5181b8;
 }
 
-.main-nav__divider {
+.divider {
     margin: 8px 0 8px 30px;
     border-top: 1px solid #dce1e6;
 }
 
-.main-nav__other {
+.other {
     font-size: 0.7rem;
     padding: 0 6px;
 }
 
-.main-nav__other-item {
+.otheritem {
     margin-right: 10px;
     line-height: 1.5;
-    color: #00000080;
+    color: #000000;
 }

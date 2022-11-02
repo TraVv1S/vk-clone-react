@@ -1,0 +1,24 @@
+.title {
+    color: #000;
+}
+
+.header {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.count {
+    color: #818c99;
+    padding: 0 6px;
+}
+
+.rightlink {
+    float: right;
+    color: #818c99;
+}
+
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

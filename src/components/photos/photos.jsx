@@ -1,28 +1,28 @@
+import Island from '../../uikit/island/island';
+import Widget from '../../uikit/island/widget';
 import user from '../../data/user.json'
 
-import './photos.css'
+import classes from './photos.module.scss'
+
 
 const Photos = () => {
     const {urls, count} = user.photos;
     
     return (
-        <div className="account-photos island">
-            <a href="/" className="island__right-link">показать на карте</a>
-            <a href="/" className="island__label">
-                <span className="island__label-title">Мои фотографии</span>
-                <span className="island__label-count">{count}</span>
-            </a>
-            <div className="account-photos__photos">
+        <Island>
+            <Widget title="My photos" count={count} link="Show on map">
+            
+            
                 {urls.map((url, i) => {
                     return (
-                        <a href="/" key={i} className="account-photos__photo">
-                            <img className="account-photos__img" src={url} />
+                        <a href="/" key={i} className={classes.photo}>
+                            <img className={classes.img} src={url} />
                         </a>
                     )
                 })}
-            </div>
             
-        </div>
+            </Widget>
+        </Island>
     )
 }
 

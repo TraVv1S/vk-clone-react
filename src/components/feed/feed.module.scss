@@ -1,0 +1,26 @@
+.feed > div:first-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.tab {
+    display: inline-block;
+}
+
+.link {
+    display: block;
+    padding: 0 8px 14px;
+    color: #626d7a;
+
+    &_active {
+      border-bottom: 2px solid #5181b8;
+      color: #000;
+    }
+  }
+
+.search {
+    float: right;
+    color: #818c99;
+    width: 14px;
+    height: 25px;
+}

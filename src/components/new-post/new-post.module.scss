@@ -1,0 +1,39 @@
+.ava {
+    float: left;
+    margin-top: -5px;
+
+    &_pic {
+      width: 28px;  
+      border-radius: 50%;
+    }
+  }
+
+.text {
+  margin-top: 2px;
+  margin-left: 10px;
+  border: none;
+
+  &:focus-visible {
+    border: none;
+  }
+}
+
+.options {
+  float: right;
+}
+
+.option {
+  display: inline;
+  padding-left: 10px;
+
+  &_link {
+    color:#a5acb6;
+  }
+}
+
+.divider {
+  display: inline-block;
+  height: 20px;
+  margin-left: 10px;
+  border-right: 1px solid #a5acb6;
+}

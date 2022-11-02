@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import Island from '../../uikit/island/island';
 import user from '../../data/user.json'
 
-import './account-info.css'
+import classes from './account-info.module.scss'
 
 const AccountInfo = () => {
 
@@ -12,24 +13,21 @@ const AccountInfo = () => {
         setShowMoreInfo(!showMoreInfo)
     }
 
-    // const onInfoBlockHover = () => {
-    //     setShowEditLink(!showEditLink)
-    // }
-
+    // не стоит создавать функции в ф.компоненте без оборачивания
     const renderInfo = (obj) => {
         const items = Object.keys(obj.data).map((key, index) => {
             return (
-                <div className="account-info__row" key={index}>
-                    <h3 className="account-info__title">{key}:</h3>
-                    <a href="#" className="account-info__value">{obj.data[key]}</a>
+                <div className={classes.row} key={index}>
+                    <h3 className={classes.title}>{key}:</h3>
+                    <a href="#">{obj.data[key]}</a>
                 </div>
             )
         });
 
         return (
-            <div className="account-info__more-main account-info__more-category">
-                {showEditLink ? <a href="" className="account-info__more-category-edit">Edit</a> : null}
-                {obj.title ? <h2 className="account-info__more-header">{obj.title}</h2> : null}
+            <div className={classes.category}>
+                {showEditLink ? <a href="" className={classes.category_edit}>Edit</a> : null}
+                {obj.title ? <h2 className={classes.category_header}>{obj.title}</h2> : null}
                 {items}
             </div>
         )
@@ -37,7 +35,7 @@ const AccountInfo = () => {
     
     const MoreInfo = () => {
         return (
-            <div className="account-info__more">
+            <div>
                 {renderInfo(user.more.main)}
                 {renderInfo(user.more.contacts)}
                 {renderInfo(user.more.education)}
@@ -45,47 +43,48 @@ const AccountInfo = () => {
         )
     }
 
+    // не стоит создавать функции в ф.компоненте без оборачивания. Через useMemo Object.keys(user).filter a через render .map
     const Counts = () => {
         const counts = Object.keys(user)
                             .filter(key => user[key].count)
                             .map((key, index) => {
                                 return (
-                                    <a href="/" className="account-info__counter" key={index}>
-                                        <div className="account-info__count">{user[key].count}</div>
-                                        <div className="account-info__count-title">{key}</div>
+                                    <a href="/" className={classes.counter} key={index}>
+                                        <div className={classes.count}>{user[key].count}</div>
+                                        <div className={classes.count_title}>{key}</div>
                                     </a>
                                 )
                             })
                             
         return (
-            <div className="account-info__counts">
+            <div className={classes.counts}>
                 {counts}
             </div>
         )
     }
 
     return (
-        <div className="account-info island">
-            <a href="/" className="island__right-link">online</a>
-            <h1 className="account-info__name">Данила Рапоткин</h1>
+        <Island>
+            <a href="/" className={classes.online}>online</a>
+            <h1 className="account-info__name">Danila Ra</h1>
             <span className="status">★★★★★☆☆☆☆☆☆☆</span>
-            <div className="account-info__divider"></div>
+            <div className={classes.divider}></div>
 
             {renderInfo(user.basic)}
 
-            <div className="account-info__more-toggle">
+            <div>
                 <button href="/"
-                        className="account-info__more-link"
-                        onClick={onMoreInfoToggle}>Показать подробную информацию</button>
+                        className={classes.morelink}
+                        onClick={onMoreInfoToggle}>Show details</button>
             </div>
             
             { showMoreInfo ? <MoreInfo /> : null }
             
-            <div className="account-info__divider-full"></div>
+            <div className={classes.divider_full}></div>
 
             <Counts />
 
-        </div>
+        </Island>
     )
     
 }

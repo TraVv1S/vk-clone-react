@@ -1,39 +1,33 @@
 import user from '../../data/user.json'
-
+import Island from '../../uikit/island/island';
+import Widget from '../../uikit/island/widget';
 import classes from './friends.module.scss'
 
 const Friends = () =>{
-
+    console.log(classes)
     return (
-        <div className={classes.accountfriends}>
-            <a href="/" className="island__right-link">обновления</a>
-            <a href="/" className="island__label">
-                <span className="island__label-title">Друзья</span>
-                <span className="island__label-count">289</span>
-            </a>
-            
-            <div className="account-friends__friends island__content">
-                {user.friends.map(f => (<a href={"/"+f.id} className="account-friends__friend">
-                                            <img src={f.ava} alt="" className="account-friends__friend-pic" />
-                                            <p className="account-friends__friend-name">{f.name}</p>
-                                        </a>))
-                            .slice(0, 6)}
-            </div>
-
-            <div className="account-info__divider-full"></div>
-            <a href="/" className="island__label">
-                <span className="island__label-title">Друзья онлайн</span>
-                <span className="island__label-count">20</span>
-            </a>
-
-            <div className="account-friends__friends island__content">
-                {user.friends.filter(f => f.online).map(f => (<a href={"/"+f.id} className="account-friends__friend">
-                                                <img src={f.ava} alt="" className="account-friends__friend-pic" />
-                                                <p className="account-friends__friend-name">{f.name}</p>
+        <Island>
+            <Widget title="Friends" count="289">
+                
+                    {user.friends.map(f => (<a href={"/"+f.id} className={classes.friend}>
+                                                <img src={f.ava} alt="" className={classes.pic} />
+                                                <p className={classes.name}>{f.name}</p>
                                             </a>))
                                 .slice(0, 6)}
-            </div>
-        </div>
+                
+            </Widget>
+            <div className={classes.divider}></div>
+            
+            <Widget title="Friends online" count="20">
+                
+                    {user.friends.filter(f => f.online).map(f => (<a href={"/"+f.id} className={classes.friend}>
+                                                    <img src={f.ava} alt="" className={classes.pic} />
+                                                    <p className={classes.name}>{f.name}</p>
+                                                </a>))
+                                    .slice(0, 6)}
+                
+            </Widget>
+        </Island>
     )
 }
 
