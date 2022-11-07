@@ -1,15 +1,18 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Header from './components/header/header';
-import Sidebar from './components/sidebar/sidebar';
-import MyPage from "./pages/my-page";
-import Messenger from "./pages/messenger"
-import News from "./pages/news"
+import Header from './containers/Header/header';
+import Sidebar from './containers/Sidebar/sidebar';
+import UserPage from './containers/UserPage/userPage'
+import Messenger from "./containers/Messenger/messenger"
+import News from "./containers/News/news"
+import users from '@/data/user.json'
 
 
 import './App.scss';
 
 function App() {
+
+  
   return (
     <Router>
       <div className="App">
@@ -20,7 +23,7 @@ function App() {
             <Sidebar />
 
             <Routes>
-              <Route path="/" element={<MyPage />} />
+              <Route path="/" element={<UserPage user={users[0]}/>} />
               <Route path="/im" element={<Messenger />} />
               <Route path="/news" element={<News />} />
               

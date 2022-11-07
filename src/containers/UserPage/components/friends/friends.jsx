@@ -1,10 +1,11 @@
-import user from '../../data/user.json'
-import Island from '../../uikit/island/island';
-import Widget from '../../uikit/island/widget';
+import Island from '@/uikit/island/island';
+import Widget from '@/uikit/island/widget';
 import classes from './friends.module.scss'
 
-const Friends = () =>{
-    console.log(classes)
+const Friends = (props) =>{
+    
+    const user = props.user;
+
     return (
         <Island>
             <Widget title="Friends" count="289">

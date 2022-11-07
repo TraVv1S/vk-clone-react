@@ -1,166 +1,357 @@
-{
-    "id": 4779397,
-    "name": "Danila",
-    "surname": "Rapotkin",
-    "basic": {
-        "data": {
-            "Birthday": "June 30, 1990",
-            "City": "Saint-Petersburg",
-            "Relationship": "In ❤️ with Ksenia Khromova",
-            "Company": "Tovstonogov Bolshoi Drama Theater"
-        }
-    },
-    "more": {
-        "main": {
-            "title": "Main information",
+[
+    {
+        "id": 424242,
+        "name": "Danila",
+        "surname": "Ra",
+        "basic": {
             "data": {
-                "Hometown": "Troitsk",
-                "Languages": "Russian",
-                "Father": "Alexandr Rapotkin",
-                "Brother": "Roman Rapotkin"
+                "Birthday": "June 30, 1990",
+                "City": "Saint-Petersburg",
+                "Relationship": "In ❤️ with Ksenia Khromova",
+                "Company": "Tovstonogov Bolshoi Drama Theater"
             }
         },
-        "contacts": {
-            "title": "Contact information",
-            "data": {
-                "Home": "Troitsk"
-            }
-        },
-        "education": {
-            "title": "Education",
-            "data": {
-                "University": "ТФ ЧелГУ '12",
-                "Faculty": "Mathematics",
-                "Study program": "Mathematics",
-                "Status": "Specialist"
-            }
-        }
-    },
-    "photos": {
-        "count": 350,
-        "urls": ["/img/photo-1.jpg",
-                "/img/photo-2.jpg",
-                "/img/photo-3.jpg",
-                "/img/photo-4.jpg"]
-    },
-    "friendscount": {
-        "count": 289,
-        "ids": []
-    },
-    "mentions": {
-        "count": 49
-    },
-    "videos": {
-        "count": 109,
-        "urls": []
-    },
-    "audios": {
-        "count": 121,
-        "urls": []
-    },
-
-    "posts": [
-        {
-            "id": 1,
-            "repost_id": null,
-            "time": "7 фев в 17:09",
-            "text": ["TRIUMPHANT - BREAK UP",
-                "by 1994 production and РАМЕНКИ village",
-                "https://www.instagram.com/1994product...",
-                "",
-                "Director: Sasha Nekrasov"],
-            "media": {
-                "video": "https://www.youtube.com/embed/Azi8ug35L4o?controls=0"
-            },
-            "likes": 1,
-            "comments": 2,
-            "reposts": 3,
-            "views": 555,
-            "archived": false
-        },
-        {
-            "id": 2,
-            "repost_id": null,
-            "time": "7 фев в 17:09",
-            "text": ["Вышел!🥳🥳🥳🥳",
-                "Этим хитом мы проводим черту между смутным прошлым и светлым будущим. Делитесь треком со всеми, комментируйте и наслаждайтесь сами.",
-                "https://band.link/fz97p (по мере появления на площадках будет редактироваться)",
-                "",
-                "Всем хой!"],
-            "media": {
-                "audio": "#",
-                "photo": "/img/post1-pic1.jpg",
-                "link": "#"
-            },
-            "likes": 3,
-            "comments": 2,
-            "reposts": 1,
-            "views": 666,
-            "archived": false
-        },
-        {
-            "id": 33,
-            "repost_id": null,
-            "time": "7 фев в 17:09",
-            "text": ["Вышел!🥳🥳🥳🥳",
-                "Этим хитом мы проводим черту между смутным прошлым и светлым будущим. Делитесь треком со всеми, комментируйте и наслаждайтесь сами.",
-                "https://band.link/fz97p (по мере появления на площадках будет редактироваться)",
-                "repost",
-                "Всем хой!"],
-            "media": {
-                "audio": "#",
-                "photo": "/img/post1-pic1.jpg",
-                "link": "#"
-            },
-            "likes": 103,
-            "comments": 22,
-            "reposts": 13,
-            "views": 123,
-            "archived": true
-        }
-    ],
-    "friends": [{
-                    "id": 1,
-                    "ava": "/img/friend-ava.jpg",
-                    "name": "Валентин",
-                    "online": true
-                },
-                {
-                    "id": 2,
-                    "ava": "/img/friend-ava2.jpg",
-                    "name": "Руслан",
-                    "online": false
-                },
-                {
-                    "id": 3,
-                    "ava": "/img/friend-ava3.jpg",
-                    "name": "Сергей",
-                    "online": true
-                },
-                {
-                    "id": 4,
-                    "ava": "/img/friend-ava4.jpg",
-                    "name": "Анастасия",
-                    "online": true
-                },
-                {
-                    "id": 5,
-                    "ava": "/img/friend-ava5.jpg",
-                    "name": "Сергей",
-                    "online": true
-                },
-                {
-                    "id": 6,
-                    "ava": "/img/friend-ava6.jpg",
-                    "name": "Александр",
-                    "online": true
-                },
-                {
-                    "id": 7,
-                    "ava": "/img/friend-ava7.jpg",
-                    "name": "Иван",
-                    "online": true
+        "more": {
+            "main": {
+                "title": "Main information",
+                "data": {
+                    "Hometown": "Troitsk",
+                    "Languages": "Russian",
+                    "Father": "Alexandr Ra",
+                    "Brother": "Roman Ra"
                 }
-    ]
+            },
+            "contacts": {
+                "title": "Contact information",
+                "data": {
+                    "Home": "Troitsk"
+                }
+            },
+            "education": {
+                "title": "Education",
+                "data": {
+                    "University": "ТФ ЧелГУ '12",
+                    "Faculty": "Mathematics",
+                    "Study program": "Mathematics",
+                    "Status": "Specialist"
+                }
+            }
+        },
+        "photos": {
+            "count": 350,
+            "urls": ["/img/photo-1.jpg",
+                    "/img/photo-2.jpg",
+                    "/img/photo-3.jpg",
+                    "/img/photo-4.jpg",
+                    "/img/photo-4.jpg"]
+        },
+        "friendscount": {
+            "count": 289,
+            "ids": []
+        },
+        "mentions": {
+            "count": 49
+        },
+        "videos": {
+            "count": 109,
+            "urls": []
+        },
+        "audios": {
+            "count": 121,
+            "urls": []
+        },
 
-}
+        "posts": [
+            {
+                "id": 300,
+                "author_id": 222222,
+                "repost_id": null,
+                "time": "9 фев в 17:09",
+                "text": ["Вышел!🥳🥳🥳🥳",
+                    "https://band.link/fz97p (по мере появления на площадках будет редактироваться)",
+                    "repost",
+                    "Всем хой!"],
+                "media": {
+                    "audio": "#",
+                    "photo": "/img/post1-pic1.jpg",
+                    "link": "#"
+                },
+                "likes": 103,
+                "comments": 22,
+                "reposts": 13,
+                "views": 123,
+                "archived": false
+            },
+            {
+                "id": 100,
+                "author_id": 424242,
+                "repost_id": null,
+                "time": "7 фев в 17:09",
+                "text": ["TRIUMPHANT - BREAK UP",
+                    "by 1994 production and РАМЕНКИ village",
+                    "https://www.instagram.com/1994product...",
+                    "",
+                    "Director: Sasha Nekrasov"],
+                "media": {
+                    "video": "https://www.youtube.com/embed/Azi8ug35L4o?controls=0"
+                },
+                "likes": 1,
+                "comments": 2,
+                "reposts": 3,
+                "views": 555,
+                "archived": false
+            },
+            {
+                "id": 200,
+                "author_id": 222222,
+                "repost_id": null,
+                "time": "8 фев в 17:09",
+                "text": ["АРХИВНЫЙ ПОСТ!!!"],
+                "media": {
+                    "audio": "#",
+                    "photo": "/img/post1-pic1.jpg",
+                    "link": "#"
+                },
+                "likes": 3,
+                "comments": 2,
+                "reposts": 1,
+                "views": 666,
+                "archived": true
+            },
+            {
+                "id": 201,
+                "author_id": 424242,
+                "repost_id": null,
+                "time": "8 фев в 17:09",
+                "text": ["ЕЩЕ ПОСТ!!!"],
+                "likes": 0,
+                "comments": 0,
+                "reposts": 0,
+                "views": 1,
+                "archived": false
+            }
+            
+        ],
+        "friends": [{
+                        "id": 1,
+                        "ava": "/img/friend-ava.jpg",
+                        "name": "Валентин",
+                        "online": true
+                    },
+                    {
+                        "id": 2,
+                        "ava": "/img/friend-ava2.jpg",
+                        "name": "Руслан",
+                        "online": false
+                    },
+                    {
+                        "id": 3,
+                        "ava": "/img/friend-ava3.jpg",
+                        "name": "Сергей",
+                        "online": true
+                    },
+                    {
+                        "id": 4,
+                        "ava": "/img/friend-ava4.jpg",
+                        "name": "Анастасия",
+                        "online": true
+                    },
+                    {
+                        "id": 5,
+                        "ava": "/img/friend-ava5.jpg",
+                        "name": "Сергей",
+                        "online": true
+                    },
+                    {
+                        "id": 6,
+                        "ava": "/img/friend-ava6.jpg",
+                        "name": "Александр",
+                        "online": true
+                    },
+                    {
+                        "id": 7,
+                        "ava": "/img/friend-ava7.jpg",
+                        "name": "Иван",
+                        "online": true
+                    }
+        ]
+
+    },
+    {
+        "id": 222222,
+        "name": "Roman",
+        "surname": "Ra",
+        "basic": {
+            "data": {
+                "Birthday": "July 5, 1987",
+                "City": "Troitsk",
+                "Relationship": "married",
+                "Company": "Rabota"
+            }
+        },
+        "more": {
+            "main": {
+                "title": "Main information",
+                "data": {
+                    "Hometown": "Troitsk",
+                    "Languages": "Russian",
+                    "Father": "Alexandr Ra",
+                    "Brother": "Danila Ra"
+                }
+            },
+            "contacts": {
+                "title": "Contact information",
+                "data": {
+                    "Home": "Troitsk"
+                }
+            },
+            "education": {
+                "title": "Education",
+                "data": {
+                    "University": "University",
+                    "Faculty": "Faculty",
+                    "Study program": "Study program",
+                    "Status": "Specialist"
+                }
+            }
+        },
+        "photos": {
+            "count": 350,
+            "urls": ["/img/photo-1.jpg",
+                    "/img/photo-2.jpg",
+                    "/img/photo-3.jpg",
+                    "/img/photo-4.jpg"]
+        },
+        "friendscount": {
+            "count": 289,
+            "ids": []
+        },
+        "mentions": {
+            "count": 49
+        },
+        "videos": {
+            "count": 109,
+            "urls": []
+        },
+        "audios": {
+            "count": 121,
+            "urls": []
+        },
+
+        "posts": [
+            {
+                "id": 300,
+                "author_id": 222222,
+                "repost_id": null,
+                "time": "9 фев в 17:09",
+                "text": ["Вышел!🥳🥳🥳🥳",
+                    "https://band.link/fz97p (по мере появления на площадках будет редактироваться)",
+                    "repost",
+                    "Всем хой!"],
+                "media": {
+                    "audio": "#",
+                    "photo": "/img/post1-pic1.jpg",
+                    "link": "#"
+                },
+                "likes": 103,
+                "comments": 22,
+                "reposts": 13,
+                "views": 123,
+                "archived": false
+            },
+            {
+                "id": 100,
+                "author_id": 424242,
+                "repost_id": null,
+                "time": "7 фев в 17:09",
+                "text": ["TRIUMPHANT - BREAK UP",
+                    "by 1994 production and РАМЕНКИ village",
+                    "https://www.instagram.com/1994product...",
+                    "",
+                    "Director: Sasha Nekrasov"],
+                "media": {
+                    "video": "https://www.youtube.com/embed/Azi8ug35L4o?controls=0"
+                },
+                "likes": 1,
+                "comments": 2,
+                "reposts": 3,
+                "views": 555,
+                "archived": false
+            },
+            {
+                "id": 200,
+                "author_id": 222222,
+                "repost_id": null,
+                "time": "8 фев в 17:09",
+                "text": ["АРХИВНЫЙ ПОСТ!!!"],
+                "media": {
+                    "audio": "#",
+                    "photo": "/img/post1-pic1.jpg",
+                    "link": "#"
+                },
+                "likes": 3,
+                "comments": 2,
+                "reposts": 1,
+                "views": 666,
+                "archived": true
+            },
+            {
+                "id": 201,
+                "author_id": 424242,
+                "repost_id": null,
+                "time": "8 фев в 17:09",
+                "text": ["ЕЩЕ ПОСТ!!!"],
+                "likes": 0,
+                "comments": 0,
+                "reposts": 0,
+                "views": 1,
+                "archived": false
+            }
+            
+        ],
+        "friends": [{
+                        "id": 1,
+                        "ava": "/img/friend-ava.jpg",
+                        "name": "Валентин",
+                        "online": true
+                    },
+                    {
+                        "id": 2,
+                        "ava": "/img/friend-ava2.jpg",
+                        "name": "Руслан",
+                        "online": false
+                    },
+                    {
+                        "id": 3,
+                        "ava": "/img/friend-ava3.jpg",
+                        "name": "Сергей",
+                        "online": true
+                    },
+                    {
+                        "id": 4,
+                        "ava": "/img/friend-ava4.jpg",
+                        "name": "Анастасия",
+                        "online": true
+                    },
+                    {
+                        "id": 5,
+                        "ava": "/img/friend-ava5.jpg",
+                        "name": "Сергей",
+                        "online": true
+                    },
+                    {
+                        "id": 6,
+                        "ava": "/img/friend-ava6.jpg",
+                        "name": "Александр",
+                        "online": true
+                    },
+                    {
+                        "id": 7,
+                        "ava": "/img/friend-ava7.jpg",
+                        "name": "Иван",
+                        "online": true
+                    }
+        ]
+
+    }
+]

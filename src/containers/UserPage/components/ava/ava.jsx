@@ -1,7 +1,6 @@
-import Island from '../../uikit/island/island'
-import user from '../../data/user.json'
+import Island from '@/uikit/island/island'
+import BlueBtn from '@/uikit/island/blueBtn'
 import classes from './ava.module.scss'
-import BlueBtn from '../../uikit/island/blueBtn'
 
 const Ava = () => {
 

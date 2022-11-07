@@ -1,4 +1,4 @@
-import Feed from "../components/feed/feed";
+import Feed from '../Feed/feed'
 
 const News = () => {
     return (

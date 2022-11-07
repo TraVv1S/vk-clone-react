@@ -1,17 +1,19 @@
-import Island from '../../uikit/island/island';
-import Widget from '../../uikit/island/widget';
-import user from '../../data/user.json'
+import Island from '@/uikit/island/island';
+import Widget from '@/uikit/island/widget';
 
 import classes from './photos.module.scss'
 
 
-const Photos = () => {
-    const {urls, count} = user.photos;
+const Photos = (props) => {
+
+    const user = props.user;
+
+    const urls = user.photos.urls.slice(0, 4);
+    const count = user.photos.count;
     
     return (
         <Island>
             <Widget title="My photos" count={count} link="Show on map">
-            
             
                 {urls.map((url, i) => {
                     return (

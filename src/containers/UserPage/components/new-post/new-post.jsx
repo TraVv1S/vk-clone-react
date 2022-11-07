@@ -1,6 +1,5 @@
-import Island from '../../uikit/island/island';
+import Island from '@/uikit/island/island';
 import classes from './new-post.module.scss';
-// import user from '../../data/user.json'
 
 const NewPost = () => {
     return (
