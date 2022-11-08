@@ -5,7 +5,6 @@ import user from '@/data/user.json'
 
 const Post = (props) => {
 
-    // console.log('postrender')
     const data = props.postData;
 
     let [likes, setLikes] = useState(+data.likes)
@@ -21,10 +20,12 @@ const Post = (props) => {
     const renderMedia = () => {
 
         return (
+
+            // imagine that here is a component for each media type
             <div className="post__media">
                 {data.media.video 
                 ? (<div className={classes.media_video}>
-                            <iframe width="520" height="315" src={data.media.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="520" height="315" src={data.media.video} title="YouTube video player" frameBorder="0" ></iframe>
                          </div>)
                 : null
                 }
@@ -101,9 +102,12 @@ const Post = (props) => {
                 <a href="#" className={classes.ava}>
                     <img src="/img/ava_s.jpg" alt="ava small" className={classes.ava_pic} />
                 </a>
+
+                {/* three dots menu */}
                 {/* <a href="/" className={classes.options}>
                     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="more_horizontal_24__Page-2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><g id="more_horizontal_24__more_horizontal_24"><path id="more_horizontal_24__Bounds" d="M24 0H0v24h24z"></path><path d="M18 10a2 2 0 012 2 2 2 0 01-2 2 2 2 0 01-2-2c0-1.1.9-2 2-2zm-6 4a2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2 2 2 0 01-2 2zm-6 0a2 2 0 01-2-2c0-1.1.9-2 2-2a2 2 0 012 2 2 2 0 01-2 2z" id="more_horizontal_24__Mask" fill="currentColor"></path></g></g></svg>
                 </a> */}
+
                 <button className={classes.options} onClick={onDelete}>
                     delete
                 </button>

@@ -7,8 +7,8 @@ import Friends from './components/friends/friends'
 import Collections from './components/collections/collections'
 import Gifts from './components/gifts/gifts';
 
-const UserPage = (props) => {
-    const user = props.user
+const UserPage = ({user}) => {
+    
     return (
         <>
             <div className="column-s">

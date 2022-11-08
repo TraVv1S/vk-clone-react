@@ -91,7 +91,7 @@ const Sidebar = () => {
     return (
         <aside className={classes.sidebar}>
             <ul className={classes.mainnav}>
-                {menuItems.map(e => <li>
+                {menuItems.map((e, i) => <li key={i}>
                                         <a href={e.link} className={classes.item}>
                                             <div className={classes.icon}>
                                                 {e.icon}

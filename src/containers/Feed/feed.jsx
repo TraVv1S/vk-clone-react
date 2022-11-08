@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import Post from '../Post/post'
 import Tabs from '../Tabs/tabs'
-import Island from '@/uikit/island/island'
 
 import classes from './feed.module.scss'
 
 
-
-const Feed = (props) => {
-
-    const user = props.user;
+const Feed = ({user}) => {
+    
     const posts = [...user.posts]
     
     const [filteredPosts, setFilteredPosts] = useState(posts);
@@ -32,15 +29,10 @@ const Feed = (props) => {
     }
 
     return (
-        
         <div className={classes.feed}>
             <Tabs onTabChange={handleTabChange}/>
-            
-            {filteredPosts.map((p) => <Post onPostDelete={handlePostDelete} postData={p}/>)}
-            
-            
+            {filteredPosts.map((p) => <Post key={p.id} onPostDelete={handlePostDelete} postData={p}/>)}
         </div>
-        
     )
 }
 

@@ -1,6 +1,6 @@
 import classes from './gifts.module.scss'
 import Island from '@/uikit/island/island';
-import Widget from '@/uikit/island/widget';
+import Widget from '@/uikit/widget/widget';
 
 const Gifts = () => {
     return (

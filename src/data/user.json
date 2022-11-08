@@ -11,8 +11,8 @@
                 "Company": "Tovstonogov Bolshoi Drama Theater"
             }
         },
-        "more": {
-            "main": {
+        "more": [
+            {
                 "title": "Main information",
                 "data": {
                     "Hometown": "Troitsk",
@@ -21,13 +21,13 @@
                     "Brother": "Roman Ra"
                 }
             },
-            "contacts": {
+            {
                 "title": "Contact information",
                 "data": {
                     "Home": "Troitsk"
                 }
             },
-            "education": {
+            {
                 "title": "Education",
                 "data": {
                     "University": "ТФ ЧелГУ '12",
@@ -36,7 +36,7 @@
                     "Status": "Specialist"
                 }
             }
-        },
+        ],
         "photos": {
             "count": 350,
             "urls": ["/img/photo-1.jpg",
@@ -93,7 +93,7 @@
                     "",
                     "Director: Sasha Nekrasov"],
                 "media": {
-                    "video": "https://www.youtube.com/embed/Azi8ug35L4o?controls=0"
+                    "video": "https://www.youtube.com/embed/Azi8ug35L4o"
                 },
                 "likes": 1,
                 "comments": 2,

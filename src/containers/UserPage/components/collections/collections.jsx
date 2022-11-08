@@ -1,5 +1,5 @@
 import Island from '@/uikit/island/island';
-import Widget from '@/uikit/island/widget';
+import Widget from '@/uikit/widget/widget';
 import classes from './collections.module.scss';
 
 const Collections = () => {

@@ -1,12 +1,10 @@
 import Island from '@/uikit/island/island';
-import Widget from '@/uikit/island/widget';
+import Widget from '@/uikit/widget/widget';
 
 import classes from './photos.module.scss'
 
 
-const Photos = (props) => {
-
-    const user = props.user;
+const Photos = ({user}) => {
 
     const urls = user.photos.urls.slice(0, 4);
     const count = user.photos.count;

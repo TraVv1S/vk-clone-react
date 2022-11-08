@@ -1,5 +1,5 @@
 import Island from '@/uikit/island/island'
-import BlueBtn from '@/uikit/island/blueBtn'
+import BlueBtn from '@/uikit/blueBtn/blueBtn'
 import classes from './ava.module.scss'
 
 const Ava = () => {
@@ -33,41 +33,33 @@ const Ava = () => {
     return (
         <>
             <Island>
-                
-                    <div className={classes.edit}>
-                        <img src="/img/ava_m.jpg" alt="avatar" />
-                    </div>
-                    <BlueBtn text="Edit"/>
+                <div className={classes.edit}>
+                    <img src="/img/ava_m.jpg" alt="avatar" />
+                </div>
+                <BlueBtn text="Edit"/>
 
-                    <ul className={classes.nav}>
-                        {avaMenu.map(e => <li>
+                <ul className={classes.nav}>
+                    {avaMenu.map((e, i) => <li key={i}>
                                             <a href={e.link} className={classes.item}>
                                                 <div className={classes.item_icon}>
                                                     {e.icon}
                                                 </div>
-                                                
-                                                    {e.text}
-                                                
+                                                {e.text}
                                             </a>
                                         </li>)}
-                    </ul>
+                </ul>
                 
             </Island>
 
             <Island>
-                
-                    <a href="/" className={classes.profilelink}>
-                        <div className={classes.item_icon}>
-                            <img src="/img/icons/link.png" alt="" />
-                        </div>
-                        
-                            Profile link
-                        
-                    </a>
-                
+                <a href="/" className={classes.profilelink}>
+                    <div className={classes.item_icon}>
+                        <img src="/img/icons/link.png" alt="" />
+                    </div>
+                    Profile link
+                </a>
             </Island>
-        </>
-        
+        </>     
     )
 }
 
