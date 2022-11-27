@@ -12,9 +12,9 @@ const UserPage = ({user}) => {
     return (
         <>
             <div className="column-s">
+                <Friends/>
                 <Ava />
                 <Gifts />
-                <Friends user={user}/>
                 <Collections />
             </div>
             <div className="column-m">
