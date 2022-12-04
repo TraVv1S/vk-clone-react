@@ -12,16 +12,17 @@ const UserPage = ({user}) => {
     return (
         <>
             <div className="column-s">
-                <Friends/>
+                
                 <Ava />
                 <Gifts />
+                <Friends/>
                 <Collections />
             </div>
             <div className="column-m">
                 <AccountInfo user={user}/>
                 <Photos user={user}/>
                 <NewPost user={user}/>
-                <Feed user={user}/>
+                <Feed />
             </div>
         </>
     )
