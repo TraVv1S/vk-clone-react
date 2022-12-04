@@ -11,7 +11,7 @@ const Feed = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [posts, setPosts] = useState([]);
-    const [filteredPosts, setFilteredPosts] = useState(posts);
+    const [activeTab, setActiveTab] = useState(0);
 
     const userId = 424242;
 
@@ -34,38 +34,37 @@ const Feed = () => {
 
     useEffect(() => {
         getPosts()
-        
     }, [])
-    
-    useMemo (() => setFilteredPosts(posts), [posts])
-    
-    
 
+    const filteredPosts =  useMemo(() => {
+        switch(activeTab) {
+            case '1': 
+                return posts.filter(post => post.author_id === userId)
+            case '2':
+                return posts.filter(post => post.archived)
+            default:
+                return posts
+        }
+    }, [activeTab, posts]);
+    
     const handlePostDelete = (postId) => {
-        setFilteredPosts(filteredPosts.filter(post => post.id != postId))
+        setPosts(posts.filter(post => post.id != postId))
     }
 
     const handleTabChange = (id) => {
-        switch(id) {
-            case '1': 
-                setFilteredPosts(posts.filter(post => post.author_id === userId))
-                break
-            case '2':
-                setFilteredPosts(posts.filter(post => post.archived))
-                break
-            default:
-                setFilteredPosts(posts)
-        }
+        setActiveTab(id)
     }
 
     return (
         <div className={classes.feed}>
             <Tabs onTabChange={handleTabChange}/>
-            {error ? error.message : null}
-            {!isLoaded 
-            ? <Island>Loading...</Island>
-            : filteredPosts.map((p) => <Post key={p.id} onPostDelete={handlePostDelete} postData={p}/>)}
             
+            {error ? error.message : null}
+            {!isLoaded ? <Island>Loading...</Island> : null}
+            
+            {filteredPosts.length === 0 && isLoaded
+                ? <Island>Nothing to show</Island> 
+                : filteredPosts.map((p) => <Post key={p.id} onPostDelete={handlePostDelete} postData={p}/>)}
         </div>
     )
 }
