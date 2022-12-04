@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Post from '../Post/post'
 import Tabs from '../Tabs/tabs'
 import Island from '@/uikit/island/island'
@@ -22,6 +22,7 @@ const Feed = () => {
             (result) => {
               setIsLoaded(true);
               setPosts(result);
+            //   setFilteredPosts(result)
               console.log(result)
             },
             (error) => {
@@ -35,7 +36,8 @@ const Feed = () => {
         getPosts()
         
     }, [])
-    // const posts = [...user.posts]
+    
+    useMemo (() => setFilteredPosts(posts), [posts])
     
     
 
