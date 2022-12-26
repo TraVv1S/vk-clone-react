@@ -27,7 +27,6 @@ const Feed = () => {
               setIsLoaded(true);
               setPosts(result); 
             //   setFilteredPosts(result)
-              console.log(result)
             },
             (error) => {
               setIsLoaded(true);

@@ -15,7 +15,7 @@ const initialState = {
 
 
 const friendsSlice = createSlice({
-    name: 'users',
+    name: 'friends',
     initialState,
     reducers: {
         friendsFetching: state => {state.friends.loading = 'loading'},

@@ -10,10 +10,9 @@ import { fetchFriends, fetchOnlineFriends } from '@/actions';
 
 const Friends = () =>{
 
-    const { friends, onlineFriends } = useSelector(state => state.users);
+    const { friends, onlineFriends } = useSelector(state => state.friends);
     const dispatch = useDispatch();
     const {request} = useHttp();
-    console.log('friends.jsx', friends, onlineFriends)
 
 
     useEffect(() => {

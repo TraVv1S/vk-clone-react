@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import users from '../containers/UserPage/components/friends/friendsSlice'
+import friends from '../containers/UserPage/components/friends/friendsSlice'
 
 const store = configureStore({
-    reducer: { users },
+    reducer: { friends },
     // middleware: getDefaultMiddleware => getDefaultMiddleware(),
     devtools: process.env.NODE_ENV != 'production',
 })
