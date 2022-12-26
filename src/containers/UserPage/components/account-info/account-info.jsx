@@ -27,7 +27,7 @@ const AccountInfo = ({user}) => {
 
             <div>
                 <button  className={classes.morelink} onClick={onMoreInfoToggle}>
-                    Show details
+                    {showMoreInfo ? 'Hide' : 'Show'} details
                 </button>
             </div>
             

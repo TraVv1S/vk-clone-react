@@ -2,26 +2,30 @@ import { useState, useEffect, useMemo } from 'react'
 import Post from '../Post/post'
 import Tabs from '../Tabs/tabs'
 import Island from '@/uikit/island/island'
+// import useDataService from '../../services/dataService'
 
 import classes from './feed.module.scss'
 
 
 const Feed = () => {
-
+    // const {isLoaded, error, getPosts} = useDataService();
+    
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [posts, setPosts] = useState([]);
     const [activeTab, setActiveTab] = useState(0);
 
+    
+
     const userId = 424242;
 
-    const getPosts = () => {
+    const getPosts = () => { 
         fetch("/api2/posts")
           .then(res => res.json())
           .then(
             (result) => {
               setIsLoaded(true);
-              setPosts(result);
+              setPosts(result); 
             //   setFilteredPosts(result)
               console.log(result)
             },

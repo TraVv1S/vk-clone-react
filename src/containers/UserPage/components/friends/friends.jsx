@@ -2,91 +2,60 @@ import Island from '@/uikit/island/island';
 import Widget from '@/uikit/widget/widget';
 import { useEffect, useState, useMemo } from 'react';
 import classes from './friends.module.scss';
-// import useFriendsService from '@/services/friendsService';
+import { useHttp } from '@/hooks/http.hook';
+
+import { useDispatch, useSelector } from 'react-redux';
+
+import { fetchFriends, fetchOnlineFriends } from '@/actions';
 
 const Friends = () =>{
 
-    // const {isLoaded, error, getFriends} = useFriendsService();
+    const { friends, onlineFriends } = useSelector(state => state.users);
+    const dispatch = useDispatch();
+    const {request} = useHttp();
+    console.log('friends.jsx', friends, onlineFriends)
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [friends, setFriends] = useState([]);
-    const [onlineFriends, setOnlineFriends] = useState([]);
 
     useEffect(() => {
-        getFriends()
-        getOnlineFriends()
+        dispatch(fetchFriends(request))
+        dispatch(fetchOnlineFriends(request))
+        
     }, [])
 
-    const getFriends = () => {
-        fetch("/api2/users")
-          .then(res => res.json())
-          .then(
-            (result) => {
-              setIsLoaded(true);
-              setFriends(result);
-              console.log(result)
-            },
-            (error) => {
-              setIsLoaded(true);
-              setError(error);
-            }
-          )
-    }
+    return (
+      <Island>
+          
+          {(friends.loading === "error") 
+          ? "Error!"
+          : (friends.loading === "loading")
+            ? "Loading..."
+            : <Widget title="Friends" count={friends.list.length}>
 
-    const getOnlineFriends = () => {
-        fetch("/api2/users?another=true")
-          .then(res => res.json())
-          .then(
-            (result) => {
-              setIsLoaded(true);
-              setOnlineFriends(result);
-              
-            },
-            (error) => {
-              setIsLoaded(true);
-              setError(error);
-            }
-          )
-    }
-
-    // useEffect(() => {
-    //     setFriends(getFriends())
-    // }, [])
-   
-    // if (error) {
-    //     return <Island>Error: {error.message}</Island>;
-    //   } else if (!isLoaded) {
-    //     return <Island>Loading...</Island>;
-    //   } else {
-
-
-        return (
-        <Island>
-            {error ? error.message : null}
-            {isLoaded ? null : "Loading..."}
-
-            <Widget title="Friends" count={friends.length}>
-
-                {friends.map((f, i) => (<a key={i} href={"/id"+f.id} className={classes.friend}>
+                {friends.list.map((f, i) => (<a key={i} href={"/id"+f.id} className={classes.friend}>
                                             <img src={f.avatarUrl} alt="" className={classes.pic} />
                                             <p className={classes.name}>{f.firstName}</p>
                                         </a>))
                             .slice(0, 6)}
                     
-            </Widget>
-            <div className={classes.divider}></div>
-            
-            <Widget title="Friends online" count={onlineFriends.length}>
+              </Widget>}
+          
+          <div className={classes.divider}></div>
+          
+          {(onlineFriends.loading === "error") 
+          ? "Error!"
+          : (onlineFriends.loading === "loading")
+            ? "Loading..."
+            :
+          <Widget title="Friends online" count={onlineFriends.list.length}>
 
-                {onlineFriends.map((f, i) => (<a key={i} href={"/id"+f.id} className={classes.friend}>
-                                                <img src={f.avatarUrl} alt="" className={classes.pic} />
-                                                <p className={classes.name}>{f.firstName}</p>
-                                            </a>))
-                                .slice(0, 6)}
-                
-            </Widget>
-        </Island>
+              {onlineFriends.list.map((f, i) => (<a key={i} href={"/id"+f.id} className={classes.friend}>
+                                              <img src={f.avatarUrl} alt="" className={classes.pic} />
+                                              <p className={classes.name}>{f.firstName}</p>
+                                          </a>))
+                              .slice(0, 6)}
+              
+          </Widget>}
+      </Island>
     )
 }
 
