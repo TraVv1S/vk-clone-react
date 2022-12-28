@@ -1,17 +1,17 @@
-import { useState } from 'react'
 import Island from '@/uikit/island/island'
-
+import { postsFilterChanged } from '../Feed/postsSlice'
+import { useDispatch, useSelector } from 'react-redux';
 import classes from './tabs.module.scss'
 
 const tabs = ['Все записи', 'Мои записи', 'Архив записей']
 
-const Tabs = (props) => {
+const Tabs = () => {
 
-    const [activeTab, setActiveTab] = useState(0);
+    const { activeFilter } = useSelector(state => state.posts);
+    const dispatch = useDispatch();
 
     const onTabClick = (e) => {
-        setActiveTab(+e.target.dataset.index);
-        props.onTabChange(e.target.dataset.index);
+        dispatch(postsFilterChanged(+e.target.dataset.index));
     }
 
     return (
@@ -21,7 +21,7 @@ const Tabs = (props) => {
                 <ul className="tabs">
 
                     {tabs.map((tab, i) => (
-                            <li key={i} className={i === activeTab ? `${classes.link} ${classes.link_active}` : classes.link} data-index={i} onClick={onTabClick}>
+                            <li key={i} className={i === activeFilter ? `${classes.link} ${classes.link_active}` : classes.link} data-index={i} onClick={onTabClick}>
                                 {tab}
                             </li>
                     ))}

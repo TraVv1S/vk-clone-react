@@ -2,9 +2,12 @@ import { useState } from 'react';
 import Island from '@/uikit/island/island';
 import classes from './post.module.scss'
 import user from '@/data/user.json'
+import { useDispatch, useSelector } from 'react-redux';
+import {postsArchived} from '../Feed/postsSlice'
 
 const Post = (props) => {
 
+    const dispatch = useDispatch();
     const data = props.postData;
 
     let [likes, setLikes] = useState(+data.likes)
@@ -14,7 +17,7 @@ const Post = (props) => {
     }
 
     const onDelete = () => {
-        props.onPostDelete(data.id);
+        dispatch(postsArchived({id: data.id, changes: {archived: !data.archived}}))
     }
 
     const renderMedia = () => {
@@ -109,7 +112,7 @@ const Post = (props) => {
                 </a> */}
 
                 <button className={classes.options} onClick={onDelete}>
-                    delete
+                    {data.archived ? 'restore' : 'archive'}
                 </button>
                 <span href="#" className={classes.header}>
                     <h4>{`${user[0].name} ${user[0].surname}`}</h4>
