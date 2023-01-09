@@ -31,7 +31,7 @@ const AccountInfo = ({user}) => {
                 </button>
             </div>
             
-            { showMoreInfo ? user.more.map(block => <BioBlock info={block} />) : null }
+            { showMoreInfo ? user.more.map((block, i) => <BioBlock info={block} key={i}/>) : null }
             
             <div className={classes.divider_full}></div>
 

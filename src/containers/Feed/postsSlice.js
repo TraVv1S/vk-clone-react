@@ -17,6 +17,7 @@ export const fetchPosts = createAsyncThunk(
     }
 )
 
+
 const postsSlice = createSlice({
     name: 'posts',
     initialState,

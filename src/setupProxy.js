@@ -198,6 +198,66 @@ const posts = [
   
 ]
 
+const comments = [
+  {
+    "id": 101,
+    "post_id": 100,
+    "author_id": 555555,
+    "time": "4:20",
+    "text": "Lone, getting high on a Saturday night"
+  },
+  {
+    "id": 102,
+    "post_id": 100,
+    "author_id": 444444,
+    "time": "4:21",
+    "text": "I’m on the edge of a knife"
+  },
+  {
+    "id": 103,
+    "post_id": 200,
+    "author_id": 333333,
+    "time": "4:22",
+    "text": "Nobody cares if I’m dead or alive"
+  },
+  {
+    "id": 104,
+    "post_id": 200,
+    "author_id": 444444,
+    "time": "4:23",
+    "text": "Oh, what a wonderful life"
+  },
+  {
+    "id": 105,
+    "post_id": 201,
+    "author_id": 666666,
+    "time": "4:24",
+    "text": "Hey, uh, are we rolling?"
+  },
+  {
+    "id": 106,
+    "post_id": 201,
+    "author_id": 555555,
+    "time": "4:25",
+    "text": "Yeah, okay; no it’s, that’s fine"
+  },
+  {
+    "id": 107,
+    "post_id": 300,
+    "author_id": 111111,
+    "time": "4:26",
+    "text": "I read a fun fact about the brain and"
+  },
+  {
+    "id": 108,
+    "post_id": 300,
+    "author_id": 222222,
+    "time": "4:27",
+    "text": "Makes me sad, but I’ve forgotten what I’m on aboutMakes me sad, but I’ve forgotten what I’m on aboutMakes me sad, but I’ve forgotten what I’m on aboutMakes me sad, but I’ve forgotten what I’m on about"
+  },
+  
+];
+
 module.exports = (app) => {
   app.get("/api2/users", (req, res) => {
     console.log("API called!", req.query, req.params);
@@ -215,4 +275,45 @@ module.exports = (app) => {
       return res.json(posts);
     }, 1000);
   })
+
+  app.get("/api2/comments", (req, res) => {
+    console.log("API called!", req.query, req.params);
+    setTimeout(() => {
+      return res.json(comments);
+    }, 1000);
+  })
+
+
+
+
+  // .put((req, res) => {
+  //   if (req.body.id) {
+  //     if (!req.users.hasOwnProperty(req.body.user.id))
+  //       return res
+  //         .status(404)
+  //         .send({ message: 'User not found.' })
+
+  //     req.users[req.body.user.id] = req.body.user
+
+  //     fs.writeFile(
+  //       file,
+  //       JSON.stringify(req.users),
+  //       (err, response) => {
+  //         if (err)
+  //           return res
+  //             .status(500)
+  //             .send({ message: 'Unable update user.' })
+
+  //         return res
+  //           .status(200)
+  //           .send({ message: 'User updated.' })
+  //       }
+  //     )
+  //   } else
+  //     return res
+  //       .status(400)
+  //       .send({ message: 'Bad request.' })
+  // })
+
+
 };

@@ -1,47 +1,32 @@
-import { useState, useEffect } from 'react'
-import Island from '@/uikit/island/island'
-import useDataService from '@/services/dataService';
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFriends } from '@/actions';
+import { useHttp } from '@/hooks/http.hook';
+import classes from './messenger.module.scss';
 
+import Island from '@/uikit/island/island'
 
 const Messenger = () => {
 
-    const {isLoaded, error, items} = useDataService();
-    // const [error, setError] = useState(null);
-    // const [isLoaded, setIsLoaded] = useState(false);
-
-    const [friends, setFriends] = useState([]);
-
-    // const getFriends = async () => {
-    //     const response = await fetch("/api2/users")   
-    //       .then(res => res.json()) 
-    //       .then(
-    //         (result) => {
-    //           setIsLoaded(true);
-    //           setFriends(result);
-    //         },
-    //         (error) => {
-    //           setIsLoaded(true);
-    //           setError(error); 
-    //         }
-    //       )
-    // }
+    const { friends } = useSelector(state => state.friends);
+    const dispatch = useDispatch();
+    const {request} = useHttp();
 
     useEffect(() => {
-        setFriends(items) 
-        console.log('friends:'+friends)
+        dispatch(fetchFriends(request))
     }, [])
 
     return (
         <>
             <div className="column-m">
                 <Island>
-                    <div className="dialogues">
-                        {friends.map(f => <div href="/" className="dialogues__dialogue">
-                                                    <a href="/" className="island__right-link">4:20</a>
-                                                    <img src={f.avatarUrl} alt="" className="dialogues__dialogue-pic" />
-                                                    <div className="dialogues__dialogue-meta">
-                                                        <a href="/" className="dialogues__dialogue-name">{f.firstName}</a>
-                                                        <p className="dialogues__dialogue-status">прив чё как дел</p>
+                    <div className={classes.dialogues}>
+                        {friends.list.map(f => <div href="/" className={classes.dialogue} key={f.id}>
+                                                    <a href="/" className={classes.rightlink}>4:20</a>
+                                                    <img src={f.avatarUrl} alt="" className={classes.pic} />
+                                                    <div className={classes.meta}>
+                                                        <a href="/" className={classes.name}>{f.firstName}</a>
+                                                        <p className={classes.status}>прив чё как дел</p>
                                                     </div>
                                                 </div>)}
                     </div>

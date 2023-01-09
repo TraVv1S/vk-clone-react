@@ -1,15 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Island from '@/uikit/island/island';
 import classes from './post.module.scss'
 import user from '@/data/user.json'
 import { useDispatch, useSelector } from 'react-redux';
-import {postsArchived} from '../Feed/postsSlice'
+
+import { postsArchived } from '../Feed/postsSlice'
+import { selectAll } from '../Feed/commentsSlice'
+
+import store from '../../store';
 
 const Post = (props) => {
 
     const dispatch = useDispatch();
     const data = props.postData;
+    const comments =  selectAll(store.getState())
+    const { friends } = useSelector(state => state.friends);
 
+    const filteredComments = comments.filter(comment => comment.post_id === data.id)
+    
     let [likes, setLikes] = useState(+data.likes)
 
     const onLike = () => {
@@ -97,10 +105,11 @@ const Post = (props) => {
         )
     }
 
-    
 
     return (
         <Island>
+
+            {/* header */}
             <div className={classes.header}>
                 <a href="#" className={classes.ava}>
                     <img src="/img/ava_s.jpg" alt="ava small" className={classes.ava_pic} />
@@ -121,8 +130,8 @@ const Post = (props) => {
                 
             </div>
             
+            {/* post */}
             <div>
-                
                 <a href="/" className={classes.text_link}>
                     <p className={classes.text}>
                         {data.text.join('\r\n')}
@@ -131,6 +140,7 @@ const Post = (props) => {
                 {data.media ? renderMedia() : null}
             </div>
 
+            {/* footer */}
             <div>
                 <span className={classes.views}>
                     <div className={classes.views_icon}>
@@ -153,6 +163,18 @@ const Post = (props) => {
                         {data.reposts}
                     </li>
                 </ul>
+            </div>
+
+            {/* comments */}
+            <div className={classes.comments}>
+                {filteredComments.map(comment => <div href="/" className={classes.comment} key={comment.id}>
+                                                    <a href="/" className={classes.timestamp}>{comment.time}</a>
+                                                    <img src={friends.list.find(f => f.id === comment.author_id).avatarUrl} alt="" className={classes.pic} />
+                                                    <div className={classes.meta}>
+                                                        <a href="/" className={classes.name}>{`${friends.list.find(f => f.id === comment.author_id).firstName} ${friends.list.find(f => f.id === comment.author_id).lastName}`}</a>
+                                                        <p className={classes.status}>{comment.text}</p>
+                                                    </div>
+                                                </div>)}
             </div>
         </Island>
     )

@@ -23,6 +23,7 @@ const UserPage = ({user}) => {
                 <Photos user={user}/>
                 <NewPost user={user}/>
                 <Feed />
+                <hr/>
             </div>
         </>
     )

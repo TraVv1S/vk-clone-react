@@ -1,6 +1,6 @@
 import Island from '@/uikit/island/island';
 import Widget from '@/uikit/widget/widget';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import classes from './friends.module.scss';
 import { useHttp } from '@/hooks/http.hook';
 
@@ -16,8 +16,8 @@ const Friends = () =>{
 
 
     useEffect(() => {
-        dispatch(fetchFriends(request))
-        dispatch(fetchOnlineFriends(request))
+        dispatch(fetchFriends(request));
+        dispatch(fetchOnlineFriends(request));
         
     }, [])
 

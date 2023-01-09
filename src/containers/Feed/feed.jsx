@@ -7,14 +7,18 @@ import classes from './feed.module.scss'
 
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts, filteredPostsSelector } from './postsSlice'
+import { fetchComments } from './commentsSlice'
+
 
 
 const Feed = () => {
     
     const dispatch = useDispatch();
     const filteredPosts = useSelector(filteredPostsSelector);
+    
 
     useEffect(() => {
+        dispatch(fetchComments());
         dispatch(fetchPosts());
     }, [])
     
